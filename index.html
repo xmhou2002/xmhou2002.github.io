@@ -4,16 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Xinming Hou</title>
-  <meta name="description" content="Xinming Hou researches human-centered AI, human-AI interaction, LLMs, digital agents, multimodality, interpretability, safety, and mind-inspired (world) models.">
+  <meta name="description" content="Xinming Hou researches human-AI co-evolution, value alignment, and human flourishing, with work spanning LLMs, digital agents, AI safety, and human-AI interaction.">
   <meta name="author" content="Xinming Hou">
   <meta property="og:title" content="Xinming Hou">
-  <meta property="og:description" content="Human-centered AI, human-AI interaction, LLMs, digital agents, multimodality, interpretability, safety, and mind-inspired (world) models.">
+  <meta property="og:description" content="Human-AI co-evolution, value alignment, and human flourishing, with work spanning LLMs, digital agents, AI safety, and human-AI interaction.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dxhou.github.io/">
   <meta property="og:image" content="https://dxhou.github.io/assets/img/photo.jpeg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Xinming Hou">
-  <meta name="twitter:description" content="Human-centered AI, human-AI interaction, LLMs, digital agents, multimodality, interpretability, safety, and mind-inspired (world) models.">
+  <meta name="twitter:description" content="Human-AI co-evolution, value alignment, and human flourishing, with work spanning LLMs, digital agents, AI safety, and human-AI interaction.">
   <meta name="theme-color" content="#ffffff">
   <script>
     (function () {
@@ -1468,6 +1468,69 @@
       max-width: 82ch;
     }
 
+    .intro-text .topic-run {
+      color: var(--text);
+      font-weight: 520;
+    }
+
+    .intro-text .intro-current {
+      margin-top: 17px;
+      padding-left: 16px;
+      border-left: 2px solid var(--line-strong);
+    }
+
+    .research-vision {
+      padding: 2px 0 3px 18px;
+      border-left: 2px solid var(--accent);
+    }
+
+    .research-vision-title {
+      margin: 0 0 7px;
+      color: var(--text);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.42rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .research-lede {
+      margin-bottom: 0;
+      font-size: 1.04rem;
+      line-height: 1.7;
+    }
+
+    .research-directions {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+      margin-top: 24px;
+    }
+
+    .research-direction {
+      padding-top: 14px;
+      border-top: 1px solid var(--line-strong);
+    }
+
+    .research-direction h4 {
+      margin: 0 0 10px;
+      color: var(--text);
+      font-size: 1.03rem;
+      font-weight: 740;
+      line-height: 1.35;
+    }
+
+    .research-direction-index {
+      margin-right: 7px;
+      color: var(--accent);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.82em;
+      font-weight: 500;
+    }
+
+    .research-direction p:last-child {
+      margin-bottom: 0;
+    }
+
     section:not(.intro)::before {
       background: var(--line);
     }
@@ -1518,7 +1581,7 @@
     }
 
     .pub-card {
-      grid-template-columns: 126px minmax(0, 1fr);
+      grid-template-columns: 96px minmax(0, 1fr);
       gap: 20px;
       padding: 20px 0;
       overflow: visible;
@@ -1559,19 +1622,37 @@
       font-weight: 650;
     }
 
-    .pub-status {
-      padding: 3px 10px;
-      color: var(--accent);
-      background: rgba(98, 71, 176, 0.08);
-      border: 1px solid rgba(98, 71, 176, 0.18);
-      border-radius: 999px;
-      font-size: 0.78rem;
-      font-weight: 720;
-      line-height: 1.3;
+    .pub-venues {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin: 0 0 9px;
     }
 
-    .pub-status::before {
-      display: none;
+    .pub-venue {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 4px 11px;
+      color: var(--accent);
+      background: rgba(255, 255, 255, 0.56);
+      border: 1px solid rgba(98, 71, 176, 0.24);
+      border-radius: 999px;
+      box-shadow: 0 5px 16px rgba(39, 24, 76, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.82);
+      -webkit-backdrop-filter: blur(9px) saturate(1.15);
+      backdrop-filter: blur(9px) saturate(1.15);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.7rem;
+      font-weight: 500;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    :root[data-theme="dark"] .pub-venue {
+      color: var(--accent-strong);
+      background: rgba(255, 255, 255, 0.07);
+      border-color: rgba(167, 139, 250, 0.28);
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.08);
     }
 
     .pub-card h3 {
@@ -1627,6 +1708,11 @@
       font-weight: 600;
     }
 
+    #career .item-date-line {
+      display: block;
+      white-space: nowrap;
+    }
+
     .item-mark-logo {
       width: 126px;
       height: 52px;
@@ -1665,6 +1751,14 @@
     }
 
     .item-logo-musicx {
+      width: 126px;
+      max-height: 50px;
+      object-fit: contain;
+      object-position: center;
+      opacity: 1;
+    }
+
+    .item-logo-bialign {
       width: 126px;
       max-height: 50px;
       object-fit: contain;
@@ -1779,12 +1873,30 @@
         padding: 18px 0;
       }
 
+      .research-directions {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      #career .item-date-line {
+        display: inline;
+      }
+
       .pub-meta {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         padding: 0;
         border-bottom: 0;
+      }
+
+      .pub-venues {
+        gap: 6px;
+        margin-bottom: 8px;
+      }
+
+      .pub-venue {
+        max-width: 100%;
       }
 
       .item-mark-logo,
@@ -1837,6 +1949,7 @@
           <p class="profile-role">M.S. Student</p>
           <p>Machine Learning Department</p>
           <p><a href="https://www.musicxlab.com/#/">Music X Lab</a></p>
+          <p><a href="https://hua-shen.org/src/lab.html">BiAlign Lab</a></p>
           <p><a href="https://mbzuai.ac.ae/">MBZUAI</a></p>
           <p class="profile-location"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"></path></svg><span>Abu Dhabi, UAE</span></p>
           <p class="profile-email"><a href="mailto:dyxhou@gmail.com">dyxhou@gmail.com</a></p>
@@ -1861,9 +1974,9 @@
       </div>
       <div class="intro-text">
         <h1 class="title">Dylan Xinming HOU <span class="title-divider">|</span> <span class="cjk-name" lang="zh-Hans">侯新铭</span></h1>
-        <p>Hi, I am Dylan Xinming Hou, an M.S. student in Machine Learning at <strong><a href="https://mbzuai.ac.ae/">Mohamed bin Zayed University of Artificial Intelligence</a></strong>, working with <strong><a href="https://www.musicxlab.com/members/gus/">Gus Xia</a></strong> at <strong><a href="https://www.musicxlab.com/#/">Music X Lab</a></strong>. Previously, I received my B.E. in Artificial Intelligence from the <strong><a href="http://ai.ruc.edu.cn/english/index.htm">Gaoling School of Artificial Intelligence</a>, <a href="https://en.ruc.edu.cn/">Renmin University of China</a></strong>, where I worked with <strong><a href="https://scholar.google.com/citations?user=JNhNacoAAAAJ&amp;hl=en">Wayne Xin Zhao</a></strong> on NLP-related research.</p>
-        <p>My previous research has explored several areas of machine learning, including <strong>LLMs, digital agents, multimodality, interpretability, AI safety, mind-inspired (world) models, and human-AI interaction</strong>. These projects shaped my technical background and gradually led me to questions that are more interdisciplinary and human-facing.</p>
-        <p>My current work at <strong><a href="https://www.musicxlab.com/#/">Music X Lab</a></strong>, especially on human-AI affective interaction and mind-inspired models, has become a bridge between these technical explorations and more human-centered questions. This has led me to a growing interest in <strong>human-centered AI and human-AI interaction</strong>: how people perceive, trust, use, and adapt to rapidly evolving AI systems, and how AI can be designed in ways that better reflect human needs, values, and social contexts.</p>
+        <p>Hi, I am Dylan Xinming Hou, an M.S. student in Machine Learning at <strong><a href="https://mbzuai.ac.ae/">Mohamed bin Zayed University of Artificial Intelligence</a></strong>, where I work with <strong><a href="https://www.musicxlab.com/members/gus/">Gus Xia</a></strong> at <strong><a href="https://www.musicxlab.com/#/">Music X Lab</a></strong>. I also work with <strong><a href="https://hua-shen.org/">Hua Shen</a></strong> at <strong><a href="https://hua-shen.org/src/lab.html">BiAlign Lab</a></strong>, <strong><a href="https://shanghai.nyu.edu/">NYU Shanghai</a></strong>. Previously, I received my B.E. in Artificial Intelligence from the <strong><a href="http://ai.ruc.edu.cn/english/index.htm">Gaoling School of Artificial Intelligence</a>, <a href="https://en.ruc.edu.cn/">Renmin University of China</a></strong>, where I worked with <strong><a href="https://scholar.google.com/citations?user=JNhNacoAAAAJ&amp;hl=en">Wayne Xin Zhao</a></strong> on NLP-related research.</p>
+        <p>My previous research has explored a range of machine learning topics, including <span class="topic-run">LLMs, digital agents, interpretability, AI safety, mind-inspired (world) models, and human-AI interaction</span>. These projects gave me a technical foundation spanning AI capabilities, behavior, and interaction, while gradually leading me toward broader, more interdisciplinary questions about how humans and AI shape one another.</p>
+        <p class="intro-current">My current work across <strong><a href="https://www.musicxlab.com/#/">Music X Lab</a></strong> and <strong><a href="https://hua-shen.org/src/lab.html">BiAlign Lab</a></strong> builds on this foundation, focusing particularly on designing AI systems inspired by the human mind and responsive to human intentions, while remaining aligned with <strong>diverse and evolving human values</strong> and supporting <strong>human creativity, cognition, and agency</strong>. Together, these efforts shape my broader research vision of <strong>human-AI co-evolution</strong>.</p>
       </div>
     </section>
 
@@ -1872,21 +1985,22 @@
         <h2><span class="section-icon section-icon-blue" aria-hidden="true">R</span><span>Research interests</span></h2>
       </div>
       <div class="section-body">
-        <p>My current research direction focuses on <strong>human-AI interaction</strong>, <strong>human-centered evaluation &amp; alignment</strong>, and <strong>AI trustworthiness and safety</strong>, with the broader goal of advancing <strong class="accent-phrase">AI for social good</strong>.</p>
-        <p>Specifically, I am interested in:</p>
-        <ul class="focus-list">
-          <li>how to evaluate and align AI systems around human needs, values, and social contexts;</li>
-          <li>how to build trustworthy AI systems that remain interpretable, safe, and useful in real-world interaction;</li>
-          <li>how mind-inspired models and digital agents can support more natural, adaptive, deeper, and socially responsible human-AI collaboration.</li>
-        </ul>
-        <ul class="keyword-list">
-          <li>Human-AI interaction</li>
-          <li>Human-centered AI</li>
-          <li>Human-centered evaluation &amp; alignment</li>
-          <li>AI trustworthiness and safety</li>
-          <li>Digital agents</li>
-          <li>Mind-inspired (world) models</li>
-        </ul>
+        <div class="research-vision">
+          <h3 class="research-vision-title">Human-AI Co-evolution</h3>
+          <p class="research-lede">My research explores how AI and humanity can co-evolve, with the goal of ensuring that increasingly capable AI systems remain aligned with <strong>diverse human values</strong> while helping to expand individual potential and foster <strong>collective flourishing</strong>.</p>
+        </div>
+        <div class="research-directions">
+          <article class="research-direction">
+            <h4><span class="research-direction-index">1.</span> Value Alignment</h4>
+            <p>As AI systems become more capable and deeply embedded in human society, it is essential that their development remain aligned with the <strong>diverse and evolving values</strong> of individuals, communities, and cultures.</p>
+            <p>I am interested in how AI systems can learn, represent, and respond to human values, intentions, and preferences, while remaining <strong>trustworthy, safe, and beneficial</strong> as their capabilities continue to advance.</p>
+          </article>
+          <article class="research-direction">
+            <h4><span class="research-direction-index">2.</span> Human Flourishing</h4>
+            <p>Beyond automating existing tasks, I am interested in how AI can become a human-centered partner that strengthens human <strong>creativity, cognition, and agency</strong>.</p>
+            <p>I seek to understand how people and AI systems can learn, create, and collaborate in ways that <strong>preserve what makes us human</strong> by empowering individuals and communities to explore new possibilities, pursue their aspirations, and realize goals that are meaningful to them.</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -1899,9 +2013,12 @@
           <article class="pub-card">
             <div class="pub-meta">
               <span class="pub-year">2026</span>
-              <span class="pub-status">ACL 2026 Findings</span>
             </div>
             <div>
+              <div class="pub-venues">
+                <span class="pub-venue">ACL 2026 Findings</span>
+                <span class="pub-venue">ICML 2026 EMM-QA Workshop</span>
+              </div>
               <h3><a href="https://aigcvdetection.github.io/">Detecting AI-Generated Video: A Vision-Language Dual-View Survey</a></h3>
               <p class="subtitle"><strong>Dylan Xinming Hou</strong>, Juntian Zhang, Xu Gu, Yichen Wu, Nils Lukas, Gus Xia, Xiuying Chen, Yuhan Liu</p>
               <p>A survey of AI-generated video detection from both visual and language perspectives, with a curated taxonomy and resource list.</p>
@@ -1920,9 +2037,32 @@
           <article class="pub-card">
             <div class="pub-meta">
               <span class="pub-year">2026</span>
-              <span class="pub-status">Under review</span>
             </div>
             <div>
+              <div class="pub-venues">
+                <span class="pub-venue">COLM 2026 Social Sim Workshop</span>
+              </div>
+              <h3><a href="https://openreview.net/forum?id=okIpBjhOzW">ECHO: Evidence-Calibrated Human Outcomes from Synthetic Users for Interaction Design</a></h3>
+              <p class="subtitle"><strong>Dylan Xinming Hou</strong></p>
+              <p>This work studies evidence-calibrated synthetic users for predicting human outcomes in interaction design.</p>
+              <div class="paper-links">
+                <a href="https://openreview.net/forum?id=okIpBjhOzW">OpenReview</a>
+              </div>
+              <div class="tag-row">
+                <span>Human-AI interaction</span>
+                <span>Synthetic users</span>
+                <span>AI evaluation</span>
+              </div>
+            </div>
+          </article>
+          <article class="pub-card">
+            <div class="pub-meta">
+              <span class="pub-year">2026</span>
+            </div>
+            <div>
+              <div class="pub-venues">
+                <span class="pub-venue">Under review</span>
+              </div>
               <h3>MuseMT: Clinically Grounded Affective Interaction Through Generative Music</h3>
               <p class="subtitle"><strong>Dylan Xinming Hou</strong>, Xin Shu, Zhuojiang Cai, Yuting Wu, Yueqing Hu, Enkelejda Kasneci, Haiyang Geng, Gus Xia</p>
               <p>This work studies clinically grounded affective interaction in a music-based therapeutic system.</p>
@@ -1936,9 +2076,11 @@
           <article class="pub-card">
             <div class="pub-meta">
               <span class="pub-year">2025</span>
-              <span class="pub-status">Under review</span>
             </div>
             <div>
+              <div class="pub-venues">
+                <span class="pub-venue">Under review</span>
+              </div>
               <h3>RuleEdit: Benchmarking Rule-Level Knowledge Editing in Large Language Models</h3>
               <p class="subtitle">Jizhi Zhang, <strong>Dylan Xinming Hou</strong>, Zhaoyi Li, Muhammad Asif Ali, Gus Xia, Lijie Hu</p>
               <p>A benchmark for studying rule-level knowledge editing behavior in large language models.</p>
@@ -1952,9 +2094,11 @@
           <article class="pub-card">
             <div class="pub-meta">
               <span class="pub-year">2025</span>
-              <span class="pub-status">Under review</span>
             </div>
             <div>
+              <div class="pub-venues">
+                <span class="pub-venue">Under review</span>
+              </div>
               <h3>Does Edited Knowledge Systematically Generalize in Multi-model Large Language Models?</h3>
               <p class="subtitle">Zhuoqi He, Zhaoyi Li, <strong>Dylan Xinming Hou</strong>, Daniil Ognev, Gus Xia, Lijie Hu</p>
               <p>An analysis of whether edited knowledge systematically generalizes in multi-model large language models.</p>
@@ -1968,9 +2112,11 @@
           <article class="pub-card">
             <div class="pub-meta">
               <span class="pub-year">2024</span>
-              <span class="pub-status">Preprint</span>
             </div>
             <div>
+              <div class="pub-venues">
+                <span class="pub-venue">Preprint</span>
+              </div>
               <h3><a href="https://arxiv.org/abs/2406.13381">CoAct: A Global-Local Hierarchy for Autonomous Agent Collaboration</a></h3>
               <p class="subtitle"><strong>Xinming Hou</strong>, Mingming Yang, Wenxiang Jiao, Xing Wang, Zhaopeng Tu, Wayne Xin Zhao</p>
               <p>This work studies autonomous agent collaboration through a global-local hierarchy that combines centralized<br>coordination with local specialization.</p>
@@ -2029,16 +2175,25 @@
       <div class="section-body">
         <div class="items">
           <article class="item">
-            <div class="item-date">2025 - Present</div>
+            <div class="item-date"><span class="item-date-line">Jun. 2026 -</span> <span class="item-date-line">Present</span></div>
+            <div class="item-mark item-mark-logo"><img class="item-logo item-logo-bialign" src="assets/img/bialign.png" alt="BiAlign Lab logo"></div>
+            <div>
+              <h3>Research Assistant</h3>
+              <p class="subtitle"><a href="https://hua-shen.org/src/lab.html">BiAlign Lab</a> at <a href="https://shanghai.nyu.edu/">NYU Shanghai</a>, working with <a href="https://hua-shen.org/">Hua Shen</a></p>
+              <p>Working on bidirectional human-AI alignment, value alignment, and human-AI co-evolution.</p>
+            </div>
+          </article>
+          <article class="item">
+            <div class="item-date"><span class="item-date-line">Aug. 2025 -</span> <span class="item-date-line">Present</span></div>
             <div class="item-mark item-mark-logo item-mark-musicx"><img class="item-logo item-logo-musicx" src="assets/img/musicx.png" alt="Music X Lab logo"></div>
             <div>
               <h3>Research Assistant</h3>
               <p class="subtitle"><a href="https://www.musicxlab.com/#/">Music X Lab</a>, advised by <a href="https://www.musicxlab.com/members/gus/">Gus Xia</a></p>
-              <p>Working on machine learning, human-centered AI, and multimodal interaction.</p>
+              <p>Working on human-AI affective interaction and mind-inspired models.</p>
             </div>
           </article>
           <article class="item">
-            <div class="item-date">2022 - 2025</div>
+            <div class="item-date"><span class="item-date-line">Jul. 2022 -</span> <span class="item-date-line">Jun. 2025</span></div>
             <div class="item-mark item-mark-logo"><img class="item-logo" src="assets/img/aibox.png" alt="RUC AI BOX logo"></div>
             <div>
               <h3>Research Assistant</h3>
@@ -2047,7 +2202,7 @@
             </div>
           </article>
           <article class="item">
-            <div class="item-date">2023 - 2024</div>
+            <div class="item-date"><span class="item-date-line">Jul. 2023 -</span> <span class="item-date-line">Jun. 2024</span></div>
             <div class="item-mark item-mark-logo"><img class="item-logo" src="assets/img/ailab.png" alt="Tencent AI Lab logo"></div>
             <div>
               <h3>Research Intern</h3>
@@ -2104,7 +2259,7 @@
         <div class="flat-list">
           <div class="flat-row">
             <span class="flat-period">Advisors</span>
-            <div class="flat-main"><a href="https://www.musicxlab.com/members/gus/">Gus Xia</a>, <a href="https://scholar.google.com/citations?user=JNhNacoAAAAJ&amp;hl=en">Xin Zhao</a>, <a href="https://lijie-hu.github.io/">Lijie Hu</a></div>
+            <div class="flat-main"><a href="https://www.musicxlab.com/members/gus/">Gus Xia</a>, <a href="https://hua-shen.org/">Hua Shen</a>, <a href="https://scholar.google.com/citations?user=JNhNacoAAAAJ&amp;hl=en">Xin Zhao</a>, <a href="https://lijie-hu.github.io/">Lijie Hu</a></div>
           </div>
         </div>
       </div>
@@ -2113,6 +2268,7 @@
     <footer class="footer">
       <span>Dylan Hou / 侯新铭</span>
       <span><a href="mailto:dyxhou@gmail.com">dyxhou@gmail.com</a></span>
+      <span>Misc: <a href="https://open.spotify.com/user/31xppgqi6loyc2ppwtzkiih62mfa">Spotify</a></span>
       <span>Updated 2026</span>
     </footer>
   </main>
