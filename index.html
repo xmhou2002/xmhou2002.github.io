@@ -1504,31 +1504,110 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 28px;
       margin-top: 24px;
+      align-items: stretch;
     }
 
     .research-direction {
-      padding-top: 14px;
+      display: flex;
+      flex-direction: column;
+      padding-top: 17px;
       border-top: 1px solid var(--line-strong);
     }
 
     .research-direction h4 {
-      margin: 0 0 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin: 0 0 14px;
       color: var(--text);
-      font-size: 1.03rem;
-      font-weight: 740;
-      line-height: 1.35;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.34rem;
+      font-weight: 700;
+      line-height: 1.16;
     }
 
     .research-direction-index {
-      margin-right: 7px;
       color: var(--accent);
       font-family: "IBM Plex Mono", monospace;
-      font-size: 0.82em;
+      font-size: 0.7rem;
       font-weight: 500;
+      line-height: 1.2;
     }
 
     .research-direction p:last-child {
       margin-bottom: 0;
+    }
+
+    .research-context {
+      margin-bottom: 0;
+      padding-bottom: 20px;
+    }
+
+    .research-thread {
+      color: var(--accent-strong);
+      font-weight: 500;
+    }
+
+    .research-accent-phrase {
+      color: var(--accent-strong);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.1em;
+      font-weight: 600;
+    }
+
+    .research-human {
+      color: var(--text);
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.1em;
+      font-weight: 600;
+    }
+
+    .research-note {
+      margin-top: auto;
+      padding-top: 14px;
+      color: var(--text);
+      border-top: 1px solid var(--line);
+    }
+
+    .research-note-lead {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.74rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 1.45;
+      letter-spacing: 0;
+    }
+
+    .research-note-text {
+      display: block;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      line-height: 1.48;
+    }
+
+    .research-question .research-note-text {
+      font-style: italic;
+    }
+
+    @supports (grid-template-rows: subgrid) {
+      .research-directions {
+        grid-template-rows: repeat(3, auto);
+        row-gap: 0;
+      }
+
+      .research-direction {
+        display: grid;
+        grid-row: 1 / span 3;
+        grid-template-rows: subgrid;
+      }
+
+      .research-note {
+        margin-top: 0;
+      }
     }
 
     section:not(.intro)::before {
@@ -1875,7 +1954,13 @@
 
       .research-directions {
         grid-template-columns: 1fr;
+        grid-template-rows: auto;
         gap: 20px;
+      }
+
+      .research-direction {
+        display: flex;
+        grid-row: auto;
       }
 
       #career .item-date-line {
@@ -1992,13 +2077,13 @@
         <div class="research-directions">
           <article class="research-direction">
             <h4><span class="research-direction-index">1.</span> Value Alignment</h4>
-            <p>As AI systems become more capable and deeply embedded in human society, it is essential that their development remain aligned with the <strong>diverse and evolving values</strong> of individuals, communities, and cultures.</p>
-            <p>I am interested in how AI systems can learn, represent, and respond to human values, intentions, and preferences, while remaining <strong>trustworthy, safe, and beneficial</strong> as their capabilities continue to advance.</p>
+            <p class="research-context">As AI systems become more capable and deeply embedded in human society, it is essential that their development remain aligned with the <strong>diverse and evolving values</strong> of individuals, communities, and cultures.</p>
+            <p class="research-note research-focus"><span class="research-note-lead">Research focus</span><span class="research-note-text">I am interested in how AI systems can learn, represent, and respond to human values, intentions, and preferences, while remaining <span class="research-accent-phrase">trustworthy, safe, and beneficial</span> as their capabilities continue to advance.</span></p>
           </article>
           <article class="research-direction">
             <h4><span class="research-direction-index">2.</span> Human Flourishing</h4>
-            <p>Beyond automating existing tasks, I am interested in how AI can become a human-centered partner that strengthens human <strong>creativity, cognition, and agency</strong>.</p>
-            <p>I seek to understand how people and AI systems can learn, create, and collaborate in ways that <strong>preserve what makes us human</strong> by empowering individuals and communities to explore new possibilities, pursue their aspirations, and realize goals that are meaningful to them.</p>
+            <p class="research-context">I am interested in studying <strong>human-AI interaction</strong> and the evolving <span class="research-thread">nature of human-AI relationships</span>, exploring how AI, as an emerging form of <span class="research-thread">co-presence in human life</span>, can contribute to <span class="research-accent-phrase">human agency, creativity, social understanding, and long-term flourishing</span>, while preserving <em class="research-human">what makes us human</em>.</p>
+            <p class="research-note research-question"><span class="research-note-lead">A deeper question that drives my research is:</span><span class="research-note-text">How might the emergence of AI as a new participant in human existence transform the ways we explore and heal ourselves, create meaning, and pursue spiritual growth?</span></p>
           </article>
         </div>
       </div>
