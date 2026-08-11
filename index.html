@@ -1502,7 +1502,7 @@
     .research-directions {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 28px;
+      gap: 0;
       margin-top: 24px;
       align-items: stretch;
     }
@@ -1514,10 +1514,19 @@
       border-top: 1px solid var(--line-strong);
     }
 
+    .research-direction:first-child {
+      padding-right: 28px;
+    }
+
+    .research-direction + .research-direction {
+      padding-left: 28px;
+      border-left: 1px solid var(--line);
+    }
+
     .research-direction h4 {
       display: flex;
-      flex-direction: column;
-      gap: 4px;
+      align-items: baseline;
+      gap: 8px;
       margin: 0 0 14px;
       color: var(--text);
       font-family: "Cormorant Garamond", Georgia, serif;
@@ -1583,10 +1592,16 @@
 
     .research-note-text {
       display: block;
+      color: var(--muted);
       font-family: "Cormorant Garamond", Georgia, serif;
       font-size: 1.15rem;
-      font-weight: 600;
+      font-weight: 500;
       line-height: 1.48;
+    }
+
+    .research-note-text strong {
+      color: inherit;
+      font-weight: 700;
     }
 
     .research-question .research-note-text {
@@ -1963,6 +1978,15 @@
         grid-row: auto;
       }
 
+      .research-direction:first-child {
+        padding-right: 0;
+      }
+
+      .research-direction + .research-direction {
+        padding-left: 0;
+        border-left: 0;
+      }
+
       #career .item-date-line {
         display: inline;
       }
@@ -2077,13 +2101,13 @@
         <div class="research-directions">
           <article class="research-direction">
             <h4><span class="research-direction-index">1.</span> Value Alignment</h4>
-            <p class="research-context">As AI systems become more capable and deeply embedded in human society, it is essential that their development remain aligned with the <strong>diverse and evolving values</strong> of individuals, communities, and cultures.</p>
-            <p class="research-note research-focus"><span class="research-note-lead">Research focus</span><span class="research-note-text">I am interested in how AI systems can learn, represent, and respond to human values, intentions, and preferences, while remaining <span class="research-accent-phrase">trustworthy, safe, and beneficial</span> as their capabilities continue to advance.</span></p>
+            <p class="research-context">As <strong>AI systems</strong> become more capable and <span class="research-thread">deeply embedded in human society</span>, it is essential that their development <span class="research-thread">remain aligned</span> with the <span class="research-accent-phrase">diverse and evolving values</span> held by <em class="research-human">individuals, communities, and cultures across contexts and over time</em>.</p>
+            <p class="research-note research-focus"><span class="research-note-lead">AI alignment broader research focus</span><span class="research-note-text">I am interested in how AI systems can learn, represent, and respond to human values, intentions, and preferences, while remaining <strong>trustworthy, safe, and beneficial</strong>.</span></p>
           </article>
           <article class="research-direction">
             <h4><span class="research-direction-index">2.</span> Human Flourishing</h4>
-            <p class="research-context">I am interested in studying <strong>human-AI interaction</strong> and the evolving <span class="research-thread">nature of human-AI relationships</span>, exploring how AI, as an emerging form of <span class="research-thread">co-presence in human life</span>, can contribute to <span class="research-accent-phrase">human agency, creativity, social understanding, and long-term flourishing</span>, while preserving <em class="research-human">what makes us human</em>.</p>
-            <p class="research-note research-question"><span class="research-note-lead">A deeper question that drives my research is:</span><span class="research-note-text">How might the emergence of AI as a new participant in human existence transform the ways we explore and heal ourselves, create meaning, and pursue spiritual growth?</span></p>
+            <p class="research-context">I am interested in studying <strong>human-AI interaction</strong>, especially the evolving <span class="research-thread">nature of human-AI co-presence</span> and how it can contribute to <span class="research-accent-phrase">human agency, creativity, social understanding, and long-term flourishing</span>, while preserving <em class="research-human">what makes us human</em>.</p>
+            <p class="research-note research-question"><span class="research-note-lead">Deeper question driving my research</span><span class="research-note-text">How might the emergence of <strong>AI as a new participant in human existence</strong> transform the ways we explore and heal ourselves, create meaning, and pursue spiritual growth?</span></p>
           </article>
         </div>
       </div>
